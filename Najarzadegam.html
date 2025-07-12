@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najarzadegan | نجارزادگان</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <style>
+        @import url('images/hero-bg.jpg.jpeg');
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #111;
+            color: #ddd;
+        }
+
+        .bg-white {
+            background-color: #222 !important;
+            color: #ddd !important;
+        }
+
+        .bg-gray-50 {
+            background-color: #1a1a1a !important;
+        }
+
+        .bg-gray-800 {
+            background-color: #0a0a0a !important;
+        }
+
+        .text-gray-800 {
+            color: #ddd !important;
+        }
+
+        .text-gray-600 {
+            color: #aaa !important;
+        }
+
+        .text-gray-400 {
+            color: #777 !important;
+        }
+
+        .text-amber-600 {
+            color: #d4af37 !important;
+        }
+
+        .bg-amber-600 {
+            background-color: #d4af37 !important;
+        }
+
+        .bg-blue-600 {
+            background-color: #d4af37 !important;
+        }
+
+        .text-blue-600 {
+            color: #d4af37 !important;
+        }
+
+        .border-gray-300 {
+            border-color: #444 !important;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .shadow-lg {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .shadow-xl {
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-bg.jpg.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .testimonial-card {
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px) rotate(0.5deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px); 
+            }
+            50% { 
+                transform: translateY(-8px); 
+            }
+        }
+        
+        .floating {
+            animation: float 4s ease-in-out infinite;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .contact-input {
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            background-color: #222;
+            border-color: #444;
+            color: #ddd;
+        }
+        
+        .contact-input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease-out;
+        }
+
+        .wow {
+            visibility: hidden;
+            animation-duration: 1.2s;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg.jpeg');
+            background-size: cover;
+            background-position: center;
+            transition: background 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .nav-link::after {
+            background-color: #d4af37;
+            transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            right: 0;
+            background-color: #d4a017;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* استایل‌های جدید اضافه شده */
+        .feature-text {
+            color: #fff !important;
+        }
+        
+        .contact-label {
+            color: #fff !important;
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 shadow-lg sticky top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold text-amber-600">Najarzadegan</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link text-gray-800 hover:text-blue-600">صفحه اصلی </a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-blue-600">درباره ما</a>
+                    <a href="#services" class="nav-link text-gray-800 hover:text-blue-600">خدمات</a>
+                    <a href="#projects" class="nav-link text-gray-800 hover:text-blue-600">پروژه ها</a>
+                    <a href="#testimonials" class="nav-link text-gray-800 hover:text-blue-600">نظرات مشتریان</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-blue-600">تماس با ما</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-gray-900 py-2 px-4 shadow-lg border-t border-gray-800">
+            <a href="#home" class="block py-2 text-gray-800 hover:text-blue-600">صفحه اصلی</a>
+            <a href="#about" class="block py-2 text-gray-800 hover:text-blue-600">درباره ما</a>
+            <a href="#services" class="block py-2 text-gray-800 hover:text-blue-600">خدمات</a>
+            <a href="#projects" class="block py-2 text-gray-800 hover:text-blue-600">پروژه ها</a>
+            <a href="#testimonials" class="block py-2 text-gray-800 hover:text-blue-600">نظرات مشتریان</a>
+            <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-600">تماس با ما</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="wow animate__fadeIn" data-wow-duration="1s">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">شرکت معماری و طراحی داخلی نجارزادگان</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl">طراحی و اجرای پروژه های ساختمانی با بالاترین کیفیت و استانداردهای روز دنیا</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition duration-500 hover:-translate-y-1 pulse-button">درخواست مشاوره رایگان</a>
+                    <a href="#projects" class="bg-white hover:bg-gray-100 text-amber-600 px-6 py-3 rounded-lg font-medium transition duration-500 hover:-translate-y-1">مشاهده پروژه‌ها</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 wow animate__fadeIn" data-wow-duration="1s">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">درباره شرکت نجارزادگان</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 wow animate__fadeInRight" data-wow-duration="1s">
+                    <img src="images/about-image.jpg.jpeg" alt="درباره شرکت نجارزادگان">
+                </div>
+                <div class="md:w-1/2 wow animate__fadeInLeft" data-wow-duration="1s">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">تخصص ما در طراحی و ساخت</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        شرکت نجارزادگان با بیش از 25 سال سابقه درخشان در زمینه طراحی داخلی، ساخت و ساز و مشارکت در ساخت، همواره تلاش کرده است تا با بهره گیری از آخرین تکنولوژی‌های روز دنیا و تیم متخصص خود، پروژه‌هایی با بالاترین کیفیت و استانداردهای بین‌المللی را به مشتریان خود ارائه دهد.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        ما در نجارزادگان به دنبال ایجاد فضایی هستیم که نه تنها از نظر زیبایی شناسی چشم نواز باشد، بلکه از نظر عملکردی نیز کاملاً پاسخگوی نیازهای شما باشد. تیم طراحی ما با دقت به جزئیات و درک عمیق از نیازهای شما، فضایی منحصر به فرد و شخصی‌سازی شده خلق می‌کند.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="feature-text">35 سال تجربه</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="feature-text">تضمین کیفیت</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="feature-text">پشتیبانی 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 wow animate__fadeIn" data-wow-duration="1s">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">خدمات ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">طراحی داخلی</h3>
+                    <p class="text-gray-600">
+                        طراحی داخلی منحصر به فرد و شخصی‌سازی شده برای خانه، دفتر کار و فضاهای تجاری با استفاده از متریال باکیفیت و طرح‌های مدرن.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">ساخت و ساز</h3>
+                    <p class="text-gray-600">
+                        اجرای پروژه‌های ساختمانی از صفر تا صد با رعایت تمامی استانداردهای ایمنی و استفاده از بهترین مصالح ساختمانی.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">مشارکت در ساخت</h3>
+                    <p class="text-gray-600">
+                        مشارکت در ساخت و بازسازی ساختمان‌ها با ارائه طرح‌های اقتصادی و سودمند برای مالکین و سرمایه‌گذاران.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 wow animate__fadeIn" data-wow-duration="1s">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">پروژه های اخیر</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <img src="images/project1.jpg.jpeg" alt="ویلای مدرن شمال" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110 transform hover:rotate-1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">ویلای مدرن شمال</h3>
+                            <p class="text-gray-200">طراحی و اجرای کامل ویلای 350 متری در شمال کشور</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <img src="images/project2.jpg.jpeg" alt="دفتر کار شرکتی" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">دفتر کار شرکتی</h3>
+                            <p class="text-gray-200">طراحی و اجرای دفتر کار 500 متری برای یک شرکت بین‌المللی</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <img src="images/project3.jpg.jpeg" alt="آپارتمان مسکونی" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">آپارتمان مسکونی</h3>
+                            <p class="text-gray-200">بازسازی کامل آپارتمان 120 متری در منطقه شمال تهران</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 wow animate__fadeIn" data-wow-duration="1s">
+                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 pulse-button">مشاهده همه پروژه ها</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 wow animate__fadeIn" data-wow-duration="1s">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">نظرات مشتریان</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "شرکت نجارزادگان با دقت و حرفه‌ای‌گری فوق‌العاده‌ای پروژه ویلای ما را انجام دادند. از کیفیت کار و توجه به جزئیات بسیار راضی هستم."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="images/testimonial1.jpg.jpg" alt="علیرضا محمدی" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">علیرضا محمدی</h4>
+                            <p class="text-gray-600 text-sm">مالک ویلا در شمال</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.� 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "به عنوان مدیر یک شرکت بین‌المللی، دفتر کار ما را به نجارزادگان سپردیم و نتیجه فوق‌العاده بود. تیم آنها بسیار حرفه‌ای و با انضباط کار کردند."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="images/testimonial2.jpg.jpg" alt="نازنین احمدی" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">نازنین احمدی</h4>
+                            <p class="text-gray-600 text-sm">مدیر عامل شرکت تجاری</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "آپارتمان ما را نجارزادگان بازسازی کردند و واقعاً تحول چشمگیری ایجاد شد. از مشاوره اولیه تا اجرای نهایی، تمام مراحل حرفه‌ای و با کیفیت انجام شد."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="images/testimonial3.jpg.jpg" alt="محمد حسینی" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">محمد حسینی</h4>
+                            <p class="text-gray-600 text-sm">مالک آپارتمان مسکونی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 wow animate__fadeIn" data-wow-duration="1s">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">تماس با ما</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 wow animate__fadeInLeft" data-wow-duration="1s">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">فرم تماس</h3>
+                    <form id="contactForm" class="space-y-6" action="contact.php" method="POST">
+                        <div>
+                            <label for="name" class="contact-label block mb-2">نام و نام خانوادگی</label>
+                            <input type="text" id="name" name="name" required class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="contact-label block mb-2">آدرس ایمیل</label>
+                            <input type="email" id="email" name="email" required class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="contact-label block mb-2">شماره تماس</label>
+                            <input type="tel" id="phone" name="phone" class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="contact-label block mb-2">پیام شما</label>
+                            <textarea id="message" name="message" rows="5" required class="contact-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="pulse-button w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">ارسال پیام</button>
+                    </form>
+                    <div id="formMessage" class="mt-4 hidden"></div>
+                </div>
+                <div class="md:w-1/2 wow animate__fadeInRight" data-wow-duration="1s">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">اطلاعات تماس</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">آدرس دفتر مرکزی</h4>
+                                <p class="text-gray-600">اصفهان ، گلزار ، بین شهدای احمدی و شهرستانی (محله تل واسکان) رو‌به‌روی مسجد سیف الله خام</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">شماره تماس</h4>
+                                <p class="text-gray-600">031-32350187</p>
+                                <p class="text-gray-600">0913-8002086</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">آدرس ایمیل</h4>
+                                <p class="text-gray-600">info@najarzadegan.com</p>
+                                <p class="text-gray-600">support@najarzadegan.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">ساعات کاری</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between border-b border-gray-200 pb-2">
+                                <span class="text-gray-600">شنبه تا چهارشنبه</span>
+                                <span class="text-gray-800 font-medium">۸:۰۰ صبح - ۵:۰۰ عصر</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-200 pb-2">
+                                <span class="text-gray-600">پنجشنبه</span>
+                                <span class="text-gray-800 font-medium">۸:۰۰ صبح - ۱:۰۰ ظهر</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">جمعه</span>
+                                <span class="text-gray-800 font-medium">تعطیل</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Najarzadegan</h3>
+                    <p class="text-gray-400">
+                        شرکت نجارزادگان با بیش از 25 سال سابقه درخشان در زمینه طراحی و معماری داخلی، آماده ارائه خدمات باکیفیت به مشتریان محترم می‌باشد.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">لینک‌های سریع</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">صفحه اصلی</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">درباره ما</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">خدمات</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition duration-300">پروژه ها</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">خدمات ما</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">طراحی داخلی</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">ساخت و ساز</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">مشارکت در ساخت</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">بازسازی ساختمان</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">مشاوره رایگان</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">شبکه‌های اجتماعی</h3>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="bg-gray-700 hover:bg-blue-600 p-3 rounded-full transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-pink-600 p-3 rounded-full transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-blue-400 p-3 rounded-full transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-red-600 p-3 rounded-full transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">عضویت در خبرنامه</h4>
+                        <form class="flex">
+                            <input type="email" placeholder="ایمیل خود را وارد کنید" class="px-4 py-2 w-full rounded-r-lg focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-l-lg transition duration-300">ثبت نام</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 شرکت نجارزادگان. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Initialize WOW.js for animations
+        new WOW().init();
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                formMessage.textContent = data.message;
+                formMessage.classList.remove('hidden');
+                
+                if (data.success) {
+                    formMessage.classList.remove('text-red-500');
+                    formMessage.classList.add('text-green-500');
+                    contactForm.reset();
+                } else {
+                    formMessage.classList.remove('text-green-500');
+                    formMessage.classList.add('text-red-500');
+                }
+                
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            })
+            .catch(error => {
+                formMessage.textContent = 'خطا در ارتباط با سرور. لطفا دوباره تلاش کنید.';
+                formMessage.classList.remove('hidden', 'text-green-500');
+                formMessage.classList.add('text-red-500');
+                
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
